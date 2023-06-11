@@ -73,6 +73,8 @@ export default {
     registrations: [],
     headers: [
       { text: "Client Endpoint", value: "endpoint" },
+      { text: "Extended MAC", value: "address" },
+      //{ text: "Registration ID", value: "registrationId" },
       { text: "Registration ID", value: "registrationId" },
       { text: "Registration Date", value: "registrationDate" },
       { text: "Last Update", value: "lastUpdate" },
@@ -92,6 +94,8 @@ export default {
       .on("REGISTRATION", (reg) => {
         this.registrations = this.registrations
           .filter((r) => reg.endpoint !== r.endpoint)
+          .concat(reg)
+          .filter((r) => reg.address !== r.address)
           .concat(reg);
       })
       .on("UPDATED", (msg) => {
