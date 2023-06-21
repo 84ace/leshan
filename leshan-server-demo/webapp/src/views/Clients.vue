@@ -73,8 +73,7 @@ export default {
     registrations: [],
     headers: [
       { text: "Client Endpoint", value: "endpoint" },
-      { text: "Extended MAC", value: "address" },
-      //{ text: "Registration ID", value: "registrationId" },
+      { text: "Registered IP", value: "address" },
       { text: "Registration ID", value: "registrationId" },
       { text: "Registration Date", value: "registrationDate" },
       { text: "Last Update", value: "lastUpdate" },
